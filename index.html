@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home Page - Blog Upload</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    .blog-container {
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+    .blog-container h2 {
+      margin: 0;
+    }
+    .blog-container p {
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to AM BLOGS</h1>
+
+  <h2>Upload a Blog</h2>
+  <form id="blog-form">
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" required><br><br>
+
+    <label for="author">Author:</label>
+    <input type="text" id="author" name="author" required><br><br>
+
+    <label for="content">Content:</label><br>
+    <textarea id="content" name="content" rows="10" cols="50" required></textarea><br><br>
+
+    <label for="image">Image:</label>
+    <input type="file" id="image" name="image" accept="image/*" required><br><br>
+
+    <input type="submit" value="Upload">
+  </form>
+
+  <h2>Uploaded Blogs</h2>
+  <div id="blogs-container">
+    <!-- Display uploaded blogs here -->
+  </div>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyD24yHqCe_C0Yy-gGJoWRiAuqn04RMg54w",
+      authDomain: "am-blogs.firebaseapp.com",
+      projectId: "am-blogs",
+      storageBucket: "am-blogs.appspot.com",
+      messagingSenderId: "738797353136",
+      appId: "1:738797353136:web:1ea417c6493b78d2f86375",
+      measurementId: "G-1LJKV94T9W"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+  <footer>
+    <p>&copy; 2023 AM WEBS. All rights reserved.</p>
+  </footer>
+</body>
+</html>
